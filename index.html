@@ -266,14 +266,10 @@
                     $(this)[0].reset();
                 });
 
-                // ページロード時に保存されたフォームデータがあれば、フォームに入力する
-                const savedFormData = localStorage.getItem('contactFormData');
-                if (savedFormData) {
-                    const formDataObject = JSON.parse(savedFormData);
-                    $.each(formDataObject, function (key, value) {
-                        $('#' + key).val(value);
-                    });
-                }
+                // ページをリロードした時にローカルストレージのデータを削除する
+                $(window).on('beforeunload', function () {
+                    localStorage.removeItem('contactFormData');
+                });
             });
         </script>
 
