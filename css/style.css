@@ -310,6 +310,7 @@ form{
 .ditails{
 	width: 760px;
 	height: 500px;
+	overflow-y: auto;
 }
 
 
@@ -412,6 +413,9 @@ form{
 #contact {
 	background-color: #fef1cf;
 	padding: 20px;
+}
+#details{
+	font-family: inherit;
 }
 
 
